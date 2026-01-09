@@ -26,18 +26,6 @@
     </style>
   </head>
   <body>
-	  <h1>
-		  |    |     |    |     |      |      |	        
-	  </h1>
-	  <h1>
-		  |    |     |    |     |      |      |
-	  </h1>
-	  <h1>
-		  V    V     V    V     V      V      V
-	  </h1>
-	  <h1>
-		  Scroll. It's Not Broken I Promise.
-	  </h1>
     <header>
 {className:"inner",ref:this.containerRef,children:C})]}),this.state.backdropShadowRoot)})}prevSlide=e=>{this.hideNavigation.cancel(),e?.preventDefault(),this.slideshowRef.
 		current?.prevSlide()};nextSlide=e=>{e?.preventDefault(),this.hideNavigation.cancel(),this.slideshowRef.current?.nextSlide()};onPointerMove=e=>{!this.state.showNavigation
@@ -66,120 +54,8 @@
 			(d/100),d=d*d,d=L?d:-d;let F=d!==0,z=F&&v=="linear"&&o,j=F&&v=="radial"&&o,X=d>0?d*120+(1-d)*2400:Math.abs(d)*120+(1-Math.abs(d))*2400,O=(1-Math.abs(d))*40+Math.abs(d)*4,Z=r%X/X;d>0&&(Z=1-Z);let G=0,V=j?Z*100*l:0,
 			ne=[];C&&ne.push(b),I&&ne.push(x),k&&ne.push(_);let H="",se="",Q="",J=0,le=0,K="",q="",B=[];if(ne.length!=0)if(ne.length==1)H+=`background-color: ${ne[0]}`;else if(ne.length==2)if(o){l=(1-c)*l+l*c;let ie=(100/4*1+
 			-c*(100/4))*l-(1-c)*(100/5)*l;B[0]=0+V,B[1]=(100/4*1+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[2]=(100/4*3+-c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[3]=(100/4*3+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[4]=100*l+V}else B[0]=0,B
-			[1]=l*100+-(l*100)*c,B[2]=l*100+(1-l)*100*c,B[3]=100;else if(o){l=(1-c)*l+l*c;let ie=(100/6*1+-c*(100/6))*l-(1-c)*(100/7)*l;B[0]=0+V,B[1]=(100/6*1+c*(100/6))*l-(1-c)*(100/7)*l+-ie+V,B[2]=(100/6*3+-c*(100/6))*l-(1-c
-			)*(100/7)*l+-ie+V,B[3]=(100/6*3+c*(100/6))*l-(1-c)*(100/7)*l+-ie+V,B[4]=(100/6*5+-c*(100/6))*l-(1-c)*(100/7)*l+-ie+V,B[5]=(100/6*5+c*(100/6))*l-(1-c)*(100/7)*l+-ie+V,B[6]=100*l+V}else l=(1-c)*3*l+l*c,B[0]=100/6*0+c
-			*(100/6)*0,B[1]=100/6*2+-c*(100/6)*2,B[2]=100/6*2+c*(100/6)*1,B[3]=100/6*4+-c*(100/6)*1,B[4]=100/6*4+c*(100/6)*2,B[5]=100/6*6+-c*(100/6)*0,B[0]=Math.max(B[0]*l+50*(1-l),0),B[1]=Math.max(B[1]*l+50*(1-l),0),B[2]=B[2]
-	</header>
-			<div class="entry">
-	  <h1>
-		  Keep Going...
-	  </h1>
-	   </div>
-	  <div class="entry">
-		  <p>
-			*l+50*(1-l),B[3]=B[3]*l+50*(1-l),B[4]=Math.min(B[4]*l+50*(1-l),100),B[5]=Math.min(B[5]*l+50*(1-l),100);if(ne.length>1){H="background-image: ",H+=o?"repeating-":"",H+=v=="linear"?`linear-gradient( ${a+180}deg`:`radial
-			-gradient( circle at ${m}% ${f}%`,se=Q="background-position: ";let ie=[];if(ne.length==2?o?ie=[0,1,1,0,0]:ie=[0,0,1,1]:o?ie=[0,1,1,2,2,0,0]:ie=[0,0,1,1,2,2],z?B.forEach((pe,fe)=>{let be=ne[ie[fe]]||ne[0];H+=`, ${be} 
-			${pe/2}%`}):B.forEach((pe,fe)=>{let be=ne[ie[fe]]||ne[0];H+=`, ${be} ${pe}%`}),H+=")",z){let pe=(a+90)*(Math.PI/180),fe=i.width/i.height,be=Math.cos(pe),Ie=Math.sin(pe),_e=B[B.length-1]+"%";be<0?(Q+="0% ",se+=_e+" "):
-				(Q+=_e+" ",se+="0% "),Ie<0?(Ie*=-1,Q+="0%;",se+=_e+";"):(Q+=_e+";",se+="0%;")}}return g("div",{className:"gradient",ref:this.gradientElementRef,children:this.state.shadowRoot&&Ge(g("style",{children:`:host {
-						${H};
-					    position: absolute;
-					    top: 0;
-					    left: 0;
-					    right: 0;
-					    bottom: 0;
-					    margin: auto;
-					    background-position: 0 0;
-					    background-size: ${z?"200% 200%;":"100% 100%;"}
-					    ${z&&"will-change: background-position, background-image;"}
-					    ${z&&"animation: slideAnimation "+O+"s linear infinite "+(d<0?"reverse":"normal")+";"}
-					}
-
-					${z?`
-					@keyframes slideAnimation {
-						0% {
-							${se}
-						}
-
-						100% {
-							${Q}
-						}
-					}
-					`:""}
-					`}),this.state.shadowRoot)})}componentDidUpdate(e,i){(this.props.settings.repeat!==e.settings.repeat||this.props["animation-speed"]!==e["animation-speed"])&&(cancelAnimationFrame(this.animFrame),this.props.settings.repeat&&this.props["animation-speed"]!==0&&(this.animFrame=requestAnimationFrame(this.draw)))}componentWillUnmount(){cancelAnimationFrame(this.animFrame)}draw=()=>{this.setState(e=>({counter:e.counter+1}),()=>{this.animFrame=requestAnimationFrame(this.draw)})};componentDidMount(){this.gradientElementRef.current&&!this.gradientElementRef.current.shadowRoot&&this.gradientElementRef.current.attachShadow({mode:"open"}),this.setState({shadowRoot:this.gradientElementRef.current?.shadowRoot}),this.props.settings.repeat&&this.props["animation-speed"]!==0&&(this.animFrame=requestAnimationFrame(this.draw)),this.props.onLoad&&this.props.onLoad()}onFirstLoad=e=>{}},e5=Ex});var jAe,np,Cx,op,vae,yae,Px,Ix,i5,Ax=M(()=>{Ee();jAe=de(we(),1);ke();Wi();Mz();Qz();t5();Bi();oe();re||(Cx=new IntersectionObserver(function(t){t.forEach(function(e){let i="inside";e.boundingClientRect.top-e.boundingClientRect.height<0&&!e.isIntersecting?i="above":e.boundingClientRect.top>0&&!e.isIntersecting&&(i="below"),yt(e.target,"backdropContentViewportChange",{detail:{visible:e.isIntersecting,position:i},target:e.target})})},{root:document,rootMargin:"0px",threshold:[0,1]}),np=new IntersectionObserver(function(t){t.forEach(function(e){let i="inside";e.boundingClientRect.top-e.boundingClientRect.height<0&&!e.isIntersecting?i="above":e.boundingClientRect.top>0&&!e.isIntersecting&&(i="below"),yt(e.target,"backdropWrapperViewportChange",{detail:{visible:e.isIntersecting,position:i},target:e.target})})},{root:document,rootMargin:window.screen.height+"px 0px",threshold:[0,1]}),op=new ResizeObserver(t=>{t.forEach(e=>{yt(e.target,"backdropContentResize",{detail:{width:e.contentRect.width,height:e.contentRect.height},target:e.target})})}));vae=["wallpaper","gradient","legacy/ripple","legacy/slitscan","legacy/badtv","legacy/gmaps","legacy/halftone","legacy/kaleidoscope","legacy/morphovision","legacy/parallax","legacy/pixelation","legacy/polygon_engine","legacy/refraction","legacy/ripple","legacy/slitscan","legacy/video","legacy/wave"],yae={wallpaper:Jz,gradient:e5},Px={};vae.forEach(t=>{t.startsWith("legacy")?Px[t]=Tz:Px[t]=yae[t]});Ix=class extends ae{constructor(e){super(e),this.backdropRef=me(),this.backdropWrapperRef=me(),this.state={loaded:0,wrapperDimensions:{width:800,height:800},dimensions:{width:800,height:800},visibility:{visible:!1,position:"inside"},innerVisibility:{visible:!1,position:"inside"},wrapperVisibility:{visible:!1,position:"inside"},viewportVisibility:{visible:!1,position:"inside"}}}onViewportIntersectionChange=e=>{this.setState({viewportVisibility:e.detail})};onIntersectionChange=e=>{e.target==this.backdropRef.current?this.setState({innerVisibility:e.detail}):this.setState({wrapperVisibility:e.detail})};onResize=e=>{e.target==this.backdropRef.current?this.setState({dimensions:e.detail}):this.setState({wrapperDimensions:e.detail})};render(e,i){let{settings:r,id:n}=this.props,o=Px[r.activeBackdrop];if(!o)return r.activeBackdrop!=="none"&&console.warn(`Error: Selected Backdrop mode "${r.activeBackdrop}" not found`),null;let a=r.backdropSettings?.[r.activeBackdrop]||{},l=a.clipScroll==!0;return g("div",{className:`backdrop ${l?"clip":""}`,ref:this.backdropWrapperRef,children:[g("div",{className:`backdrop-contents ${this.state.visibility.visible?"visible":""} ${this.state.visibility.position} ${this.state.loaded>0?"loaded":""}`,ref:this.backdropRef,style:{"--backdrop-width":this.state.wrapperDimensions.width+"px","--backdrop-height":this.state.wrapperDimensions.height+"px"},children:g(o,{...this.props,wrapperDimensions:this.state.wrapperDimensions,backdropRef:this.backdropRef,id:this.props.id,path:r.activeBackdrop,settings:a,dimensions:this.state.dimensions,visibility:this.state.visibility,inViewport:this.state.viewportVisibility.visible,onLoad:this.onLoad})}),g(xo,{baseNodeRef:this.backdropWrapperRef})]})}onLoad=e=>{let i=this.backdropRef.current.querySelector("[data-backdrop]");i&&i.removeAttribute("style"),e&&(e.preventDefault(),e.stopPropagation()),this.setState(r=>({loaded:r.loaded+1})),setTimeout(()=>{this.fireBackdropLoadComplete()})};fireBackdropLoadComplete=()=>{this.backdropLoadCompleteFired||(this.backdropLoadCompleteFired=!0,window.dispatchEvent(new CustomEvent("backdrop-load-complete",{bubbles:!0,composed:!0,detail:{}})))};componentDidUpdate(e,i){if(this.state.innerVisibility!==i.innerVisibility||this.state.wrapperVisibility!==i.wrapperVisibility){let n=(this.props.settings.backdropSettings?.[this.props.settings.activeBackdrop]||{}).clipScroll==!0;this.setState({visibility:n?{...this.state.wrapperVisibility}:{...this.state.innerVisibility}})}e.settings?.activeBackdrop!==this.props.settings?.activeBackdrop&&this.setState(r=>({loaded:r.loaded-1}))}componentDidMount(){this.backdropRef.current&&(window.dispatchEvent(new CustomEvent("backdrop-load-start",{bubbles:!0,composed:!0,detail:{}})),setTimeout(()=>{this.fireBackdropLoadComplete()},3e3),this.backdropWrapperRef.current.addEventListener("legacy-backdrop-loaded",this.onLoad),St(this.backdropRef.current,"backdropContentResize",this.onResize),St(this.backdropRef.current,"backdropWrapperViewportChange",this.onIntersectionChange),St(this.backdropWrapperRef.current,"backdropContentResize",this.onResize),St(this.backdropWrapperRef.current,"backdropWrapperViewportChange",this.onIntersectionChange),St(this.backdropRef.current,"backdropContentViewportChange",this.onViewportIntersectionChange),op.observe(this.backdropRef.current),op.observe(this.backdropWrapperRef.current),np.observe(this.backdropWrapperRef.current),np.observe(this.backdropRef.current),Cx.observe(this.backdropRef.current))}componentWillUnmount(){this.backdropRef.current&&(this.backdropWrapperRef.current.removeEventListener("legacy-backdrop-loaded",this.onLoad),Ct(this.backdropRef.current,"backdropContentResize",this.onResize),Ct(this.backdropRef.current,"backdropWrapperViewportChange",this.onIntersectionChange),Ct(this.backdropWrapperRef.current,"backdropContentResize",this.onResize),Ct(this.backdropWrapperRef.current,"backdropWrapperViewportChange",this.onIntersectionChange),Ct(this.backdropRef.current,"backdropContentViewportChange",this.onViewportIntersectionChange),op.unobserve(this.backdropRef.current),op.unobserve(this.backdropWrapperRef.current),np.unobserve(this.backdropWrapperRef.current),np.unobserve(this.backdropRef.current),Cx.unobserve(this.backdropRef.current))}},i5=Ix});var ir,Te,sp,r5=M(()=>{ir=de(we(),1);ke();Te={handledEmbeds:[],embedsIniting:[],embedScriptsCache:{},songKickWidgets:{},embedInitAttempts:new WeakMap,embedChangeObserver:re?null:new MutationObserver(t=>{t.forEach(e=>{e.removedNodes.length>0&&e.target.children.length===0&&Te.add(e.target);let i=Array.from(e.addedNodes).filter(r=>r?.nodeName==="IFRAME");i.length>0&&(Array.from(e.target.querySelectorAll("iframe")).forEach(r=>{i.includes(r)||r.remove()}),e.target.getAttribute?.("data-type")==="tixtree"&&requestAnimationFrame(()=>{window.iFrameResize?.()}))})}),loadEmbedScript:(t,e)=>{if(Te.embedScriptsCache[t])return Te.embedScriptsCache[t];let i=new Promise(r=>{let n=document.createElement("script");n.setAttribute("src",t),n.onload=r,document.head.appendChild(n)});return Te.embedScriptsCache[t]=i,i},initializeBandsInTown:function(t,e){var i="https://widget.bandsintown.com/main.min.js";e==="v3"&&(i="https://widgetv3.bandsintown.com/main.min.js"),Te.loadEmbedScript(i).then(function(){BIT.widgetInitializer?t():BIT.onReady=t})},findEmbedsIn:function(t){t&&(ir.default.each(t.querySelectorAll("cargo-embed"),Te.add,Te),ir.default.each(t.querySelectorAll("#tixtree-wrapper"),e=>{e.setAttribute("data-type","tixtree"),Te.add(e)}),ir.default.each(t.querySelectorAll(".tt-widget"),e=>{e.setAttribute("data-type","ticket-tailor"),Te.add(e)}),ir.default.each(t.querySelectorAll(".shopify-buy-frame"),e=>{e.setAttribute("data-type","shopify-buy-frame"),Te.add(e)}))},add:function(t){if(!(!t||t.nodeType!==Node.ELEMENT_NODE)){var e=t.getAttribute("data-type");if(!(!e||Te.handledEmbeds.includes(t)&&t.children.length>0)){if(Te.embedInitAttempts.get(t)===void 0?Te.embedInitAttempts.set(t,0):Te.embedInitAttempts.set(t,Te.embedInitAttempts.get(t)+1),Te.embedInitAttempts.get(t)>10){console.log("Exceeded max init attempts");return}switch(e){case"tweet":Te.handleTwitterEmbed(t);break;case"twitter-timeline":Te.handleTwitterTimelineEmbed(t);break;case"bandsintown":Te.handleBandsIntownEmbed(t);break;case"songkick":Te.handleSongkickEmbed(t);break;case"opentable":Te.handleOpentableEmbed(t);break;case"typeform":Te.handleTypeFormEmbed(t);break;case"shoprocket":Te.handleShopRocketEmbed(t);break;case"tixtree":Te.handleTixTreeEmbed(t);break;case"ticket-tailor":Te.handleTicketTailorEmbed(t);break;case"shopify-buy-frame":Te.handleShopifyEmbed(t);break;default:console.log("No method for handling",e,"embed")}}}},handleTwitterEmbed:function(t){var e=t.getAttribute("data-id");!e||e===""||Te.embedsIniting.includes(t)||(Te.embedsIniting.push(t),Te.loadEmbedScript("https://platform.twitter.com/widgets.js").then(()=>{t.innerHTML="",twttr.widgets.createTweet(e,t).then(function(i){i&&(i.setAttribute("contenteditable","false"),Te.embedChangeObserver?.observe(t,{childList:!0,attributes:!0})),Te.embedsIniting=Te.embedsIniting.filter(r=>r!==t)})}),Te.handledEmbeds.push(t))},handleTwitterTimelineEmbed:function(t){if(!Te.embedsIniting.includes(t)){Te.embedsIniting.push(t);try{var e=JSON.parse(t.getAttribute("data-source"))}catch{return}typeof e=="number"&&(e=t.getAttribute("data-source"));var i;if(t.hasAttribute("data-options"))try{i=JSON.parse(t.getAttribute("data-options"))}catch{}Te.loadEmbedScript("https://platform.twitter.com/widgets.js").then(()=>{t.innerHTML="",twttr.widgets.createTimeline(e,t,i).then(function(r){r&&(r.setAttribute("contenteditable","false"),Te.embedChangeObserver?.observe(t,{childList:!0,attributes:!0})),Te.embedsIniting=Te.embedsIniting.filter(n=>n!==t)})}),Te.handledEmbeds.push(t)}},handleOpentableEmbed:function(t){if(!t.ownerDocument.contains(t)||Te.embedsIniting.includes(t))return;Te.embedsIniting.push(t);let e=document.createElement("opentable-embed-anchor");e.src=t.getAttribute("data-src"),t.appendChild(e),fetch(t.getAttribute("data-src")).then(i=>i.text()).then(i=>{if(Te.embedsIniting=Te.embedsIniting.filter(r=>r!==t),!e.ownerDocument.contains(e)){Te.handleOpentableEmbed(t);return}e.id=ir.default.uniqueId("opentable-"),i=i.replaceAll('getElementsByTagName("script")','querySelectorAll("opentable-embed-anchor#'+e.id+'")'),window.eval(i),e.remove(),Te.embedChangeObserver?.observe(t,{childList:!0,attributes:!0}),Te.handledEmbeds.push(t)})},handleBandsIntownEmbed:function(t){Te.initializeBandsInTown(()=>{t.innerHTML="";var e={},i={};ir.default.each(t.attributes,function(o){if(/^data-/.test(o.name)&&o.name!=="data-type"){var a=o.name.substr(5).replace(/-/g,"_");e[a]=o.value;var l=a.split("_").map(function(c,d){return d>0?c.charAt(0).toUpperCase()+c.slice(1):c}).join("");i[l]=o.value}});var r=document.createElement("a");if(r.setAttribute("id","bit-widget-"+ir.default.uniqueId()),r.setAttribute("class","bit-widget-initializer"),ir.default.each(e,function(o,a){r.setAttribute("data-"+a.replace(/_/g,"-"),o)}),t.appendChild(r),Ri){var n=new MutationObserver(function(o){ir.default.each(o,function(a){a.type=="childList"&&a.addedNodes.forEach(function(l){l&&l.nodeType===Node.ELEMENT_NODE&&(l.setAttribute("contenteditable",!1),l.classList.contains("bit-widget-container")&&(l.style.pointerEvents="none",n.disconnect()))})})});n.observe(t,{childList:!0})}BIT.widgetInitializer.append(r,i),Te.embedChangeObserver?.observe(t,{childList:!0}),Te.handledEmbeds.push(t)},t.getAttribute("data-bit-widget-version"))},handleSongkickEmbed:function(t){if(!Te.embedsIniting.includes(t)){Te.embedsIniting.push(t);var e={};ir.default.each(t.attributes,function(n){if(/^data-/.test(n.name)&&n.name!=="data-type"){var o=n.name.substr(5).replace(/-/g,"_");e[o]=n.value}});var i=document.createElement("a");i.setAttribute("class","songkick-widget"),i.setAttribute("href","https://www.songkick.com/artists/"+e.id),i.setAttribute("contenteditable","false"),ir.default.each(e,function(n,o){i.setAttribute("data-"+o.replace(/_/g,"-"),n)}),t.appendChild(i);var r="https://widget-app.songkick.com/injector/"+e.id;Te.songKickWidgets[e.id]===void 0?Te.songKickWidgets[e.id]=0:r=r+"?"+ ++Te.songKickWidgets[e.id],Te.loadEmbedScript(r).then(()=>{Te.embedsIniting=Te.embedsIniting.filter(n=>n!==t),t.children.length===0&&Te.add(t)}),Te.embedChangeObserver?.observe(t,{childList:!0}),Te.handledEmbeds.push(t)}},handleTypeFormEmbed:function(t){Te.embedsIniting.includes(t)||(Te.embedsIniting.push(t),Te.loadEmbedScript("https://embed.typeform.com/next/embed.js").then(()=>{if(t.dataset.embed)t.innerHTML=ir.default.unescape(t.dataset.embed),window.tf.load();else{let e={};ir.default.each(t.attributes,function(i){i.name.startsWith("data-tf")&&(e[ir.default.camelCase(i.name.replace("data-tf",""))]=i.value)}),e.container=t,delete e.iframeProps,t.innerHTML="",window.tf.createWidget(e.widget||e.live,e),t.children[0]?.setAttribute("style",t.getAttribute("data-style")),setTimeout(()=>{t.children[0]?.setAttribute("style",t.getAttribute("data-style"))},100),setTimeout(()=>{t.children[0]?.setAttribute("style",t.getAttribute("data-style"))},1e3)}Te.embedsIniting=Te.embedsIniting.filter(e=>e!==t)}),Te.embedChangeObserver?.observe(t,{childList:!0}),Te.handledEmbeds.push(t))},handleShopRocketEmbed:function(t){Te.embedsIniting.includes(t)||!t.dataset.embed||(Te.embedsIniting.push(t),Te.loadEmbedScript("https://cdn.shoprocket.io/loader.js").then(()=>{if(Ri){var e=new MutationObserver(function(i){ir.default.each(i,function(r){r.type=="childList"&&r.addedNodes.forEach(function(n){n&&n.nodeType===Node.ELEMENT_NODE&&(n.setAttribute("contenteditable",!1),n.classList.contains("sr-embed")&&(n.style.pointerEvents="none",e.disconnect()))})})});e.observe(t,{childList:!0})}t.innerHTML=ir.default.unescape(t.dataset.embed),window.Shoprocket?.init(),Te.embedsIniting=Te.embedsIniting.filter(i=>i!==t)}),Te.embedChangeObserver?.observe(t,{childList:!0}),Te.handledEmbeds.push(t))},handleTixTreeEmbed:function(t){Te.handledEmbeds.push(t),Te.embedChangeObserver?.observe(t,{childList:!0,attributes:!0})},handleTicketTailorEmbed:function(t){Te.handledEmbeds.push(t),Array.from(t.querySelectorAll(".tt-widget-wrapper")).forEach(e=>e.remove())},handleShopifyEmbed:function(t){t.setAttribute("contenteditable","false"),Te.embedChangeObserver?.observe(t,{childList:!0,attributes:!0}),Te.handledEmbeds.push(t)},remove:function(){}},sp=Te});var n5,lTe,Tx,$u,og=M(()=>{Ee();n5=de(En(),1);Ws();gi();ut();jt();lTe=de(we(),1);oe();Tx=class extends ae{constructor(e){super(e),this.state={error:!1}}render(e){return g(te,{children:[g("style",{children:`
-					.pages > .page:only-child,
-					.pages :has(.page-password) > .page:only-child {
-						min-height: var(--viewport-height);
-					}
-					
-					.pages > .page:only-child .page-content,
-					.pages :has(.page-password) > .page:only-child .page-content {
-						align-items: center;
-					}
-
-					.site-password,
-					.page-password {
-						text-align: center;
-						margin: auto;
-						height: 0;
-						width: 340px;
-						display: table;
-					}
-
-					.site-password {
-						position: fixed;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-					}
-
-					.error {
-					    transform: translate(0, 20px);
-					    position: absolute;
-					    width: 100%;
-					    text-align: center;
-					    left: 0;
-					    color: rgba(0,0,0,0.75);
-					    user-select: none;
-					}
-
-				.submit-wrapper {
-						display: grid;
-						grid-template-columns: auto 40px;
-						border-radius: 100px;
-					    border: 1px solid rgba(0,0,0,0.75);
-						grid-gap: 5px;
-						background: #fff;
-					}
-
-					.button-area {
-						position: relative;
-						width: 40px;
-						justify-content: center;
-						align-items: center;
-						display: flex;
-						cursor: pointer;
-					}
-
-					.submit-button {
-						display: block;
-						width: 36px;
-						height: 36px;
-						border-radius: 50%;
-						background: #000;
-						transform-origin: 50% 50%;
-						transform: scale(1);
-						border: none;
-						background-image: url("data:image/svg+xml,%3Csvg width='21' height='19' viewBox='0 0 21 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8438 1.9375L19.3438 9.4375L11.8438 16.9375' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.3437 9.4375L1.40625 9.4375' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
-						background-position: 46% 50%;
-						background-repeat: no-repeat;
-						background-size: 17px 17px;
-						pointer-events: auto;
-						cursor: pointer;
-						margin-right: 1px;
-						padding: 0;
-					</p>
-					</div>
+			
+	
 				
     <div class="entry">
       <h1>
