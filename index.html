@@ -73,13 +73,18 @@
 		filter(a=>!a.loading&&!a.is_deleted&&(a.is_video||a.is_image));let n=null,o=e.settings?.activeImage||null;return o===Sx.hash?(n=Sx,i.push(n)):(o&&(n=i.find(a=>a.hash==o)),n||(n=i[0])),!n&&!r&&i.length==0&&(n=Sx,i.push(n))
 		,e.settings.excluded&&(i=i.filter(a=>e.settings.excluded.indexOf(a.hash)==-1),i.length==1&&e.settings["cycle-images"]&&(n=i[0])),e.settings.order&&i.sort(function(a,l){return e.settings.order.indexOf(a.hash)
 		<e.settings.order.indexOf(l.hash)?-1:1}),{singleModel:n,modelArray:i}})(_x)});var FAe,Ex,e5,t5=M(()=>{Ee();Ue();FAe=de(we(),1);ut();_i();Jm();oe();Ex=class extends ae{constructor(e){super(e),this.state={loaded:!1,
-			counter:0,shadowRootRef:null},this.gradientElementRef=me()}render(){let{visibility:e,dimensions:i}=this.props,{counter:r}=this.state,n={};for(let[ie,pe]of Object.entries(Yd.default.defaults))this.props.settings?.
-			hasOwnProperty(ie)?n[ie]=this.props.settings[ie]:n[ie]=pe.value;let{repeat:o,rotation:a,scale:l,smoothness:c,"animation-speed":d,"pos-x":m,"pos-y":f,"gradient-type":v,"color-one":b,"color-two":x,"color-three":_,"
-			color-one-active":C,"color-two-active":I,"color-three-active":k}=n;b=b||"transparent",x=x||"transparent",_=_||"transparent",f=f+50,m=m+50,l=parseFloat(l)/100,c=parseFloat(c)/100,a=parseInt(a);let L=d>0;d=Math.abs
-			(d/100),d=d*d,d=L?d:-d;let F=d!==0,z=F&&v=="linear"&&o,j=F&&v=="radial"&&o,X=d>0?d*120+(1-d)*2400:Math.abs(d)*120+(1-Math.abs(d))*2400,O=(1-Math.abs(d))*40+Math.abs(d)*4,Z=r%X/X;d>0&&(Z=1-Z);let G=0,V=j?Z*100*l:0,
-			ne=[];C&&ne.push(b),I&&ne.push(x),k&&ne.push(_);let H="",se="",Q="",J=0,le=0,K="",q="",B=[];if(ne.length!=0)if(ne.length==1)H+=`background-color: ${ne[0]}`;else if(ne.length==2)if(o){l=(1-c)*l+l*c;let ie=(100/4*1+
-			-c*(100/4))*l-(1-c)*(100/5)*l;B[0]=0+V,B[1]=(100/4*1+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[2]=(100/4*3+-c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[3]=(100/4*3+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[4]=100*l+V}else B[0]=0,B
-
+		counter:0,shadowRootRef:null},this.gradientElementRef=me()}render(){let{visibility:e,dimensions:i}=this.props,{counter:r}=this.state,n={};for(let[ie,pe]of Object.entries(Yd.default.defaults))this.props.settings?.
+		hasOwnProperty(ie)?n[ie]=this.props.settings[ie]:n[ie]=pe.value;let{repeat:o,rotation:a,scale:l,smoothness:c,"animation-speed":d,"pos-x":m,"pos-y":f,"gradient-type":v,"color-one":b,"color-two":x,"color-three":_,"
+		color-one-active":C,"color-two-active":I,"color-three-active":k}=n;b=b||"transparent",x=x||"transparent",_=_||"transparent",f=f+50,m=m+50,l=parseFloat(l)/100,c=parseFloat(c)/100,a=parseInt(a);let L=d>0;d=Math.abs
+		(d/100),d=d*d,d=L?d:-d;let F=d!==0,z=F&&v=="linear"&&o,j=F&&v=="radial"&&o,X=d>0?d*120+(1-d)*2400:Math.abs(d)*120+(1-Math.abs(d))*2400,O=(1-Math.abs(d))*40+Math.abs(d)*4,Z=r%X/X;d>0&&(Z=1-Z);let G=0,V=j?Z*100*l:0,
+		ne=[];C&&ne.push(b),I&&ne.push(x),k&&ne.push(_);let H="",se="",Q="",J=0,le=0,K="",q="",B=[];if(ne.length!=0)if(ne.length==1)H+=`background-color: ${ne[0]}`;else if(ne.length==2)if(o){l=(1-c)*l+l*c;let ie=(100/4*1+
+		-c*(100/4))*l-(1-c)*(100/5)*l;B[0]=0+V,B[1]=(100/4*1+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[2]=(100/4*3+-c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[3]=(100/4*3+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[4]=100*l+V}else B[0]=0,B
+    (e),this.state={loaded:!1,counter:0,shadowRootRef:null},this.gradientElementRef=me()}render(){let{visibility:e,dimensions:i}=this.props,{counter:r}=this.state,n={};for(let[ie,pe]of Object.entries(Yd.default.defaults))this
+		.props.settings?.hasOwnProperty(ie)?n[ie]=this.props.settings[ie]:n[ie]=pe.value;let{repeat:o,rotation:a,scale:l,smoothness:c,"animation-speed":d,"pos-x":m,"pos-y":f,"gradient-type":v,"color-one":b,"color-two":x,
+		"color-three":_,"color-one-active":C,"color-two-active":I,"color-three-active":k}=n;b=b||"transparent",x=x||"transparent",_=_||"transparent",f=f+50,m=m+50,l=parseFloat(l)/100,c=parseFloat(c)/100,a=parseInt(a);let
+		L=d>0;d=Math.abs(d/100),d=d*d,d=L?d:-d;let F=d!==0,z=F&&v=="linear"&&o,j=F&&v=="radial"&&o,X=d>0?d*120+(1-d)*2400:Math.abs(d)*120+(1-Math.abs(d))*2400,O=(1-Math.abs(d))*40+Math.abs(d)*4,Z=r%X/X;d>0&&(Z=1-Z);let
+		G=0,V=j?Z*100*l:0,ne=[];C&&ne.push(b),I&&ne.push(x),k&&ne.push(_);let H="",se="",Q="",J=0,le=0,K="",q="",B=[];if(ne.length!=0)if(ne.length==1)H+=`background-color: ${ne[0]}`;else if(ne.length==2)if(o){l=(1-c)*l+l*c;let 
+		ie=(100/4*1+-c*(100/4))*l-(1-c)*(100/5)*l;B[0]=0+V,B[1]=(100/4*1+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[2]=(100/4*3+-c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[3]=(100/4*3+c*(100/4))*l-(1-c)*(100/5)*l+-ie+V,B[4]=100*l+V}
    </p>
 	
 				
